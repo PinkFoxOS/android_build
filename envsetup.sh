@@ -501,16 +501,19 @@ function add_lunch_combo()
     LUNCH_MENU_CHOICES=(${LUNCH_MENU_CHOICES[@]} $new_combo)
 }
 
-# add the default one here
-add_lunch_combo aosp_arm-eng
-add_lunch_combo aosp_arm64-eng
-add_lunch_combo aosp_mips-eng
-add_lunch_combo aosp_mips64-eng
-add_lunch_combo aosp_x86-eng
-add_lunch_combo aosp_x86_64-eng
-
 function print_lunch_menu()
 {
+    echo "                                                   "
+    echo "  ____    _           _      _____                 "
+    echo " |  _ \  (_)  _ __   | | __ |  ___|   ___   __  __ "
+    echo " | |_) | | | | |_ \  | |/ / | |_     / _ \  \ \/ / "
+    echo " |  __/  | | | | | | |   |  |  _|   | (_) |  |  |  "
+    echo " |_|     |_| |_| |_| |_|\_\ |_|      \___/  /_/\_\ "
+    echo "                                                   "
+    echo "          From the frog to octopus girl.           "
+    echo "                                                   "
+    echo "                                                   "
+	
     local uname=$(uname)
     echo
     echo "You're building on" $uname
