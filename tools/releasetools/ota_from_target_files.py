@@ -632,15 +632,15 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
   
-  script.Print("****************************************************");
-  script.Print("*  ____    _           _      _____                 *");
-  script.Print("* |  _ \  (_)  _ __   | | __ |  ___|   ___   __  __ *");
-  script.Print("* | |_) | | | | |_ \  | |/ / | |_     / _ \  \ \/ / *");
-  script.Print("* |  __/  | | | | | | |   |  |  _|   | (_) |  |  |  *");
-  script.Print("* |_|     |_| |_| |_| |_|\_\ |_|      \___/  /_/\_\ *");
-  script.Print("*                                                   *");
-  script.Print("*          From the frog to octopus girl.           *");
-  script.Print("****************************************************");
+  script.Print("**************************************************");
+  script.Print(" ____    _           _      _____                 ");
+  script.Print("|  _ \  (_)  _ __   | | __ |  ___|   ___   __  __ ");
+  script.Print("| |_) | | | | |_ \  | |/ / | |_     / _ \  \ \/ / ");
+  script.Print("|  __/  | | | | | | |   |  |  _|   | (_) |  |  |  ");
+  script.Print("|_|     |_| |_| |_| |_|\_\ |_|      \___/  /_/\_\ ");
+  script.Print("                                                  ");
+  script.Print("         From the frog to octopus girl.           ");
+  script.Print("**************************************************");
 
   script.Print(" **************** Maintainers *****************");
   script.Print("Hgunduz295 (frog)");
