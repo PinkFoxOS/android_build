@@ -1936,7 +1936,30 @@ endif
 
 $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	@echo "$(OTA_FROM_TARGET_SCRIPT)" > $(PRODUCT_OUT)/ota_script_path
-	@echo -e ${CL_YLW}"Package OTA:"${CL_RST}" $@"
+	@echo -e ${CL_CYN}"====================================================="${CL_CYN}
+	@echo -e ${CL_CYN}"   ____    _           _      _____                  "${CL_CYN}
+	@echo -e ${CL_CYN}"  |  _ \  (_)  _ __   | | __ |  ___|   ___   __  __  "${CL_CYN}
+	@echo -e ${CL_CYN}"  | |_) | | | | |_ \  | |/ / | |_     / _ \  \ \/ /  "${CL_CYN}
+	@echo -e ${CL_CYN}"  |  __/  | | | | | | |   |  |  _|   | (_) |  |  |   "${CL_CYN}
+	@echo -e ${CL_CYN}"  |_|     |_| |_| |_| |_|\_\ |_|      \___/  /_/\_\  "${CL_CYN}
+	@echo -e ${CL_CYN}"                                                     "${CL_CYN}
+	@echo -e ${CL_CYN}"          Feel my hands in your hair :)              "${CL_CYN}
+	@echo -e ${CL_CYN}"                                                     "${CL_CYN}
+	@echo -e ${CL_CYN}"====================================================="${CL_CYN}
+	@echo -e ${CL_CYN}"                     Maintainers                     "${CL_CYN}
+	@echo -e ${CL_CYN}" Hgunduz295                                          "${CL_CYN}
+	@echo -e ${CL_CYN}"                                                     "${CL_CYN}
+	@echo -e ${CL_CYN}" Ciyanogen                                           "${CL_CYN}
+	@echo -e ${CL_CYN}"                                                     "${CL_CYN}
+	@echo -e ${CL_CYN}" and an octopus girl.                                "${CL_CYN}
+	@echo -e ${CL_CYN}"                                                     "${CL_CYN}
+	@echo -e ${CL_CYN}"====================================================="${CL_CYN}
+	@echo -e ${CL_CYN}" A ROM Made of by PinkFox Team.                      "${CL_CYN}
+	@echo -e ${CL_CYN}"===================================================-Package complete-===================================================="${CL_RST}
+	@echo -e ${CL_CYN}"File   : "${CL_MAG} $(PRODUCT_OUT)/$(CM_VERSION).zip${CL_RST}
+	@echo -e ${CL_CYN}"MD5    : "${CL_MAG}" `cat $(CM_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1`"${CL_RST}
+	@echo -e ${CL_CYN}"Size   : "${CL_MAG}" `ls -lah $(CM_TARGET_PACKAGE) | cut -d ' ' -f 5`"${CL_RST}
+	@echo -e ${CL_CYN}"========================================================================================================================="${CL_RST}
 	$(hide) PATH=$(foreach p,$(INTERNAL_USERIMAGES_BINARY_PATHS),$(p):)$$PATH MKBOOTIMG=$(MKBOOTIMG) \
 	   $(OTA_FROM_TARGET_SCRIPT) -v \
 	   $(block_based) \
@@ -1945,7 +1968,7 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	   $(if $(OEM_OTA_CONFIG), -o $(OEM_OTA_CONFIG)) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-CM_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+CM_TARGET_PACKAGE := $(PRODUCT_OUT)/PinkFox-$(LINEAGE_VERSION).zip
 
 .PHONY: otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
